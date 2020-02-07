@@ -1,10 +1,10 @@
 <img src="https://raw.githubusercontent.com/Macro303/PokemonGo-Eventer/master/logo.png" align="left" width="120" height="120" alt="PokemonGo - Eventer Logo">
 
 # PokemonGo - Eventer
-[![Version](https://img.shields.io/github/tag-pre/Macro303/PokemonGo-Eventer.svg?label=version)](https://github.com/Macro303/PokemonGo-Eventer/releases)
-[![Issues](https://img.shields.io/github/issues/Macro303/PokemonGo-Eventer.svg?label=issues)](https://github.com/Macro303/PokemonGo-Eventer/issues)
-[![Contributors](https://img.shields.io/github/contributors/Macro303/PokemonGo-Eventer.svg?label=contributors)](https://github.com/Macro303/PokemonGo-Eventer/graphs/contributors)
-[![License](https://img.shields.io/github/license/Macro303/PokemonGo-Eventer.svg?=label=license)](https://raw.githubusercontent.com/Macro303/PokemonGo-Eventer/master/LICENSE)
+[![Version](https://img.shields.io/github/tag-pre/Macro303/PokemonGo-Eventer.svg?label=version&style=flat-square)](https://github.com/Macro303/PokemonGo-Eventer/releases)
+[![Issues](https://img.shields.io/github/issues/Macro303/PokemonGo-Eventer.svg?style=flat-square)](https://github.com/Macro303/PokemonGo-Eventer/issues)
+[![Contributors](https://img.shields.io/github/contributors/Macro303/PokemonGo-Eventer.svg?style=flat-square)](https://github.com/Macro303/PokemonGo-Eventer/graphs/contributors)
+[![License](https://img.shields.io/github/license/Macro303/PokemonGo-Eventer.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 Uses Google Calendar + Google Sheets to create events for PokemonGo and invite people based on the type of Event
 
