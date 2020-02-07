@@ -1,0 +1,13 @@
+Name: "February Community Day"
+Type: "COMMUNITY_DAY"
+StartTime: "2020-02-22T15:00:00"
+EndTime: "2020-02-22T18:00:00"
+Timezone: null
+Wild:
+  - "Rhyhorn (Rock Wreaker) [Shiny]"
+Research: []
+Eggs: {}
+Raids: {}
+Bonus:
+  - "3x Catch Stardust"
+  - "3hr Lures"

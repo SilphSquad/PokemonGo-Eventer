@@ -1,0 +1,11 @@
+Name: "Mystery Bonus"
+Type: "GENERAL_EVENT"
+StartTime: "2020-02-06T18:00:00"
+EndTime: "2020-02-06T19:00:00"
+Timezone: null
+Wild: []
+Research: []
+Eggs: {}
+Raids: {}
+Bonus:
+  - "x2 Catch Stardust"

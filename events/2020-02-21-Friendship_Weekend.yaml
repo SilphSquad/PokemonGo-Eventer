@@ -1,0 +1,15 @@
+Name: "Friendship Weekend"
+Type: "GENERAL_EVENT"
+StartTime: "2020-02-21T08:00:00"
+EndTime: "2020-02-24T22:00:00"
+Timezone: null
+Wild: []
+Research: []
+Eggs: {}
+Raids: {}
+Bonus:
+  - "Faster Friendship Levels"
+  - "2x Trade Candy"
+  - "1/2 Stardust Cost"
+  - "Open 40 Gifts"
+  - "Carry 20 Gifts"

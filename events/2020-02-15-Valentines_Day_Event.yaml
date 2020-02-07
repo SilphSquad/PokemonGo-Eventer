@@ -1,0 +1,13 @@
+Name: "Valentine's Day Event"
+Type: "RAID_DAY"
+StartTime: "2020-02-15T14:00:00"
+EndTime: "2020-02-15T17:00:00"
+Timezone: null
+Wild: []
+Research: []
+Eggs: {}
+Raids:
+  4*:
+    - "Lickitung (Body Slam) [Shiny]"
+Bonus:
+  - "Up to 5 Additional Passes"

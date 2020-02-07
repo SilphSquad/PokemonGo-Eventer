@@ -1,0 +1,11 @@
+Name: "Pokemon Spotlight"
+Type: "GENERAL_EVENT"
+StartTime: "2020-02-04T18:00:00"
+EndTime: "2020-02-04T19:00:00"
+Timezone: null
+Wild:
+  - "Onix [Shiny]"
+Research: []
+Eggs: {}
+Raids: {}
+Bonus: []
