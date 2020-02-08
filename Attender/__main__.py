@@ -17,6 +17,8 @@ def main():
     with open('attendees.yaml', 'w', encoding='UTF-8') as attendee_file:
         attendees = []
         for entry in current_sheets[1:]:
+            if entry[0].strip() in CONFIG['Ignored']:
+                continue
             LOGGER.info(f"Entry: {entry}")
             types = []
             for temp in entry[2].split(','):

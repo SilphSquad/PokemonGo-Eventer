@@ -28,7 +28,8 @@ else:
         CONFIG = {
             'Google Sheets ID': None,
             'Google Sheets Selection': None,
-            'Google Calendar ID': None
+            'Google Calendar ID': None,
+            'Ignored': []
         }
         yaml.safe_dump(CONFIG, config_yaml)
 
