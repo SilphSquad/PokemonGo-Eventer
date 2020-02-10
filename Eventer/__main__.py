@@ -51,8 +51,9 @@ def main():
             if dif.days > 1:
                 LOGGER.warning(f"Skipping Old Event `{yaml_event['Name']}` => {dif}")
             else:
-                if event_type in [EventType.GIOVANNI_SPECIAL_RESEARCH, EventType.RESEARCH_BREAKTHROUGH,
-                                  EventType.RAID_BATTLE, EventType.GO_BATTLE_LEAGUE]:
+                start_time = datetime.strptime(yaml_event['StartTime'], '%Y-%m-%dT%H:%M:%S')
+                end_time = datetime.strptime(yaml_event['EndTime'], '%Y-%m-%dT%H:%M:%S')
+                if (end_time - start_time).days > 10:
                     start = Event(
                         name=yaml_event['Name'] + ' Start',
                         event_type=event_type,
