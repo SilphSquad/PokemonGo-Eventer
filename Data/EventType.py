@@ -15,3 +15,5 @@ class EventType(Enum):
     COMMUNITY_DAY = auto()
 
     RAID_HOUR = auto()
+    SPOTLIGHT_HOUR = auto()
+    MYSTERY_BONUS = auto()
