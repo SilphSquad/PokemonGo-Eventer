@@ -25,7 +25,7 @@ def main():
                 temp = temp.strip()
                 if temp == "General Events" or temp == "Events" or temp == "General Event":
                     types.append(EventType.GENERAL_EVENT)
-                elif temp == "Giovanni" or temp == "Giovanni Special Research":
+                elif temp == "Giovanni Special Research":
                     types.append(EventType.GIOVANNI_SPECIAL_RESEARCH)
                 elif temp == "Research Breakthrough":
                     types.append(EventType.RESEARCH_BREAKTHROUGH)
