@@ -1,5 +1,5 @@
 Name: "Mystery Bonus"
-Type: "GENERAL_EVENT"
+Type: "MYSTERY_BONUS_HOUR"
 StartTime: "2020-02-20T18:00:00"
 EndTime: "2020-02-20T19:00:00"
 Timezone: null

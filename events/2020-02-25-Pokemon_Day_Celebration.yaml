@@ -1,5 +1,5 @@
 Name: "Pokemon Day Celebration"
-Type: "GENERAL_EVENT"
+Type: "GENERAL_EVENTS"
 StartTime: "2020-02-25T13:00:00"
 EndTime: "2020-03-02T13:00:00"
 Timezone: "America/Los_Angeles"

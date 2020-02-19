@@ -23,22 +23,26 @@ def main():
             types = []
             for temp in entry[2].split(','):
                 temp = temp.strip()
-                if temp == "General Events" or temp == "Events" or temp == "General Event":
-                    types.append(EventType.GENERAL_EVENT)
-                elif temp == "Giovanni Special Research":
-                    types.append(EventType.GIOVANNI_SPECIAL_RESEARCH)
-                elif temp == "Research Breakthrough":
-                    types.append(EventType.RESEARCH_BREAKTHROUGH)
-                elif temp == "Raid Boss" or temp == "Raid Battle":
-                    types.append(EventType.RAID_BATTLE)
-                elif temp == "Community Day":
-                    types.append(EventType.COMMUNITY_DAY)
-                elif temp == "Raid Hour":
-                    types.append(EventType.RAID_HOUR)
-                elif temp == "Raid Day":
-                    types.append(EventType.RAID_DAY)
-                elif temp == "GO Battle League":
+                if temp in ['General Events', 'Events', 'General Event']:
+                    types.append(EventType.GENERAL_EVENTS)
+                elif temp in ['GO Battle League']:
                     types.append(EventType.GO_BATTLE_LEAGUE)
+                elif temp in ['Raid Boss', 'Raid Battle', 'Raid Battles']:
+                    types.append(EventType.RAID_BATTLES)
+                elif temp in ['Giovanni Special Research']:
+                    types.append(EventType.GIOVANNI_SPECIAL_RESEARCH)
+                elif temp in ['Research Breakthrough']:
+                    types.append(EventType.RESEARCH_BREAKTHROUGH)
+                elif temp in ['Raid Day']:
+                    types.append(EventType.RAID_DAY)
+                elif temp in ['Community Day']:
+                    types.append(EventType.COMMUNITY_DAY)
+                elif temp in ['Raid Hour']:
+                    types.append(EventType.RAID_HOUR)
+                elif temp in ['Pokemon Spotlight Hour']:
+                    types.append(EventType.POKEMON_SPOTLIGHT_HOUR)
+                elif temp in ['Mystery Bonus Hour']:
+                    types.append(EventType.MYSTERY_BONUS_HOUR)
                 else:
                     LOGGER.error(f"Unknown Event Type: `{temp}`")
             entry_obj = {'email': entry[1].strip(), 'name': entry[0].strip(), 'types': [x.name for x in types]}

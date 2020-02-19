@@ -1,5 +1,5 @@
 Name: "Raid Boss"
-Type: "RAID_BATTLE"
+Type: "RAID_BATTLES"
 StartTime: "2020-02-04T13:00:00"
 EndTime: "2020-02-25T13:00:00"
 Timezone: "America/Los_Angeles"
