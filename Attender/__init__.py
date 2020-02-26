@@ -9,16 +9,16 @@ LOGGER = logging.getLogger(__name__)
 
 
 def init_logger() -> None:
-    LOG_DIR.mkdir(exist_ok=True)
-    console = logging.StreamHandler()
-    console.setLevel(logging.INFO)
-    file = logging.FileHandler(filename=LOG_DIR.joinpath('Attender.log'), encoding='utf-8')
-    file.setLevel(logging.DEBUG)
-    logging.basicConfig(
-        level=logging.DEBUG,
-        format='[%(asctime)s] [%(levelname)-8s] {%(name)s} | %(message)s',
-        handlers=[
-            console,
-            file
-        ]
-    )
+	LOG_DIR.mkdir(exist_ok=True)
+	console = logging.StreamHandler()
+	console.setLevel(logging.INFO)
+	file = logging.FileHandler(filename=LOG_DIR.joinpath('Attender.log'), encoding='utf-8')
+	file.setLevel(logging.DEBUG)
+	logging.basicConfig(
+		level=logging.DEBUG,
+		format='[%(asctime)s] [%(levelname)-8s] {%(name)s} | %(message)s',
+		handlers=[
+			console,
+			file
+		]
+	)
