@@ -21,17 +21,14 @@ def get_arguments() -> Namespace:
 
 args = get_arguments()
 
-if args.test:
-	ATTENDEES = []
-else:
-	with open('attendees.yaml', 'r', encoding='UTF-8') as attendee_file:
-		temp = yaml.safe_load(attendee_file)
-		ATTENDEES = [Attendee(entry=entry) for entry in temp if entry['name'] != 'Macro303']
+with open('attendees.yaml', 'r', encoding='UTF-8') as attendee_file:
+	temp = yaml.safe_load(attendee_file)
+	ATTENDEES = [Attendee(entry=entry) for entry in temp if entry['name'] != 'Macro303']
 
 
 def get_start_date() -> datetime:
 	today = datetime.today()
-	month = today.month - 1
+	month = today.month - 2
 	year = today.year if month < today.month else today.year - 1
 	return datetime.today().replace(year=year, month=month, day=1, hour=0, minute=0, second=0, microsecond=0)
 
@@ -47,9 +44,10 @@ def main():
 		with open(file, 'r', encoding='UTF-8') as event_file:
 			yaml_event = yaml.safe_load(event_file)
 			event_type = EventType[yaml_event['Type']]
-			dif = get_start_date() - datetime.strptime(yaml_event['EndTime'], '%Y-%m-%dT%H:%M:%S')
-			if dif.days > 1:
-				LOGGER.warning(f"Skipping Old Event `{yaml_event['Name']}` => {dif}")
+			dif = datetime.today() - datetime.strptime(yaml_event['EndTime'], '%Y-%m-%dT%H:%M:%S')
+			LOGGER.debug(f"{yaml_event['Name']} Age: {dif.days}")
+			if dif.days > 14:
+				LOGGER.warning(f"Skipping Old Event `{yaml_event['StartTime'].split('T')[0]}|{yaml_event['Name']}` => {dif.days} days old")
 			else:
 				start_time = datetime.strptime(yaml_event['StartTime'], '%Y-%m-%dT%H:%M:%S')
 				end_time = datetime.strptime(yaml_event['EndTime'], '%Y-%m-%dT%H:%M:%S')
@@ -71,7 +69,6 @@ def main():
 						current_events)
 					result = next(results, None)
 					if result:
-						LOGGER.info(f"{start.name} already exists, updating")
 						update_event(service=service, file_event=start, cal_event=result)
 					else:
 						create_event(service=service, file_event=start)
@@ -91,7 +88,6 @@ def main():
 					                 current_events)
 					result = next(results, None)
 					if result:
-						LOGGER.info(f"{end.name} already exists, updating")
 						update_event(service=service, file_event=end, cal_event=result)
 					else:
 						create_event(service=service, file_event=end)
@@ -113,26 +109,28 @@ def main():
 						current_events)
 					result = next(results, None)
 					if result:
-						LOGGER.info(f"{event.name} already exists, updating")
 						update_event(service=service, file_event=event, cal_event=result)
 					else:
 						create_event(service=service, file_event=event)
 
 
-def update_event(service, file_event, cal_event):
+def update_event(service, file_event: Event, cal_event):
+	updated = False
 	if file_event.description() != (cal_event.get('description', '')):
 		print("---")
 		print(file_event.description())
 		print("---")
+		updated = True
 	event_attendees = [x for x in ATTENDEES if file_event.event_type in x.event_types]
 	current_attendees = [x['email'] for x in cal_event.get('attendees', [])]
 	missing = [x for x in event_attendees if x.email not in set(current_attendees)]
 	if missing:
 		cal_event['attendees'] = [x.output() for x in event_attendees]
-		service.events().patch(calendarId=CONFIG['Google Calendar ID'], eventId=cal_event['id'],
-		                       body=cal_event).execute()
-	else:
-		LOGGER.info("No update necessary")
+		if not args.test:
+			service.events().patch(calendarId=CONFIG['Google Calendar ID'], eventId=cal_event['id'], body=cal_event).execute()
+		LOGGER.info(f"{file_event.start_time.split('T')[0]}|{file_event.name} Event updated")
+	elif not updated:
+		LOGGER.info(f"No update for {file_event.start_time.split('T')[0]}|{file_event.name}")
 
 
 def list_events(service):
@@ -144,7 +142,7 @@ def list_events(service):
 	return events_result.get('items', [])
 
 
-def create_event(service, file_event):
+def create_event(service, file_event: Event):
 	event_json = {
 		'summary': file_event.name,
 		'description': file_event.description(),
@@ -170,8 +168,9 @@ def create_event(service, file_event):
 	}
 
 	try:
-		calendar_event = service.events().insert(calendarId=CONFIG['Google Calendar ID'], body=event_json).execute()
-		LOGGER.info(f"{file_event.name} Event created: {calendar_event.get('htmlLink')}")
+		if not args.test:
+			calendar_event = service.events().insert(calendarId=CONFIG['Google Calendar ID'], body=event_json).execute()
+		LOGGER.info(f"{file_event.start_time.split('T')[0]}|{file_event.name} Event created")
 	except errors.HttpError as err:
 		LOGGER.error(err)
 

@@ -1,0 +1,33 @@
+Name: "Psychic Spectacular"
+Type: "GENERAL_EVENTS"
+StartTime: "2020-03-27T08:00:00"
+EndTime: "2020-03-30T22:00:00"
+Timezone: null
+Wild:
+  - "Increased Unovan Psychic-Type"
+  - "Solosis [New] During the Day"
+  - "Gothita [New] During the Evening"
+  - "Increased Psychic-Type"
+Research:
+  - "Psychic Spectacular Field Research"
+Eggs:
+  2km:
+    - "Abra"
+    - "Drowzee [Shiny]"
+    - "Ralts [Shiny]"
+    - "Spoink [Shiny]"
+    - "Baltoy [Shiny]"
+    - "Wynaut [Shiny]"
+    - "Beldum [Shiny]"
+    - "Gothita"
+    - "Solosis"
+Raids:
+  1*:
+    - "Psychic-Type"
+  2*:
+    - "Psychic-Type"
+  3*:
+    - "Psychic-Type"
+  4*:
+    - "Psychic-Type"
+Bonus: []

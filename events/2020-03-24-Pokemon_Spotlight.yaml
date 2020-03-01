@@ -1,10 +1,10 @@
 Name: "Pokemon Spotlight"
 Type: "POKEMON_SPOTLIGHT_HOUR"
-StartTime: "2020-02-11T18:00:00"
-EndTime: "2020-02-11T19:00:00"
+StartTime: "2020-03-24T18:00:00"
+EndTime: "2020-03-24T19:00:00"
 Timezone: null
 Wild:
-  - "Spoink [Shiny]"
+  - "Increased Spawns"
 Research: []
 Eggs: {}
 Raids: {}

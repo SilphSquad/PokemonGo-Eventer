@@ -1,0 +1,15 @@
+Name: "GO Rocket Global Takeover"
+Type: "GENERAL_EVENTS"
+StartTime: "2020-03-07T14:00:00"
+EndTime: "2020-03-07T17:00:00"
+Timezone: null
+Wild:
+  - "Increased Grunts, Leaders and Giovanni"
+Research: []
+Eggs: {}
+Raids: {}
+Bonus:
+  - "All previous Leader Shadow Pokemon will be available"
+  - "Change Frustration to another move via Charge TM (will be replaced if purified)"
+  - "Team Rocket x2 Stardust"
+  - "Team Rocket music"

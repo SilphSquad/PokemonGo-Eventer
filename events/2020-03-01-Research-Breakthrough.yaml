@@ -1,0 +1,12 @@
+Name: "March Research Breakthrough"
+Type: "RESEARCH_BREAKTHROUGH"
+StartTime: "2020-03-01T13:00:00"
+EndTime: "2020-04-01T13:00:00"
+Timezone: "America/Los_Angeles"
+Wild: []
+Research:
+  - "Ferroseed"
+Eggs: {}
+Raids: {}
+Bonus:
+  - "Bonus Stardust"

@@ -1,0 +1,35 @@
+Name: "Mysterious Weekend"
+Type: "GENERAL_EVENTS"
+StartTime: "2020-03-20T08:00:00"
+EndTime: "2020-03-23T22:00:00"
+Timezone: null
+Wild:
+  - "Increased Normal-Type"
+  - "Increased Fire-Type"
+  - "Increased Water-Type"
+  - "Increased Electric-Type"
+  - "Increased Ice-Type"
+  - "Nincada [Shiny]"
+Research:
+  - "New Special Research Story"
+Eggs:
+  5km:
+    - "Nincada [Shiny]"
+    - "Karrablast"
+    - "Shelmet"
+Raids:
+  1*:
+    - "Bug-Type"
+    - "Steel-Type"
+  2*:
+    - "Bug-Type"
+    - "Steel-Type"
+  3*:
+    - "Bug-Type"
+    - "Steel-Type"
+  4*:
+    - "Bug-Type"
+    - "Steel-Type"
+Bonus:
+  - "x2 Catch Stardust"
+  - "x2 Hatch Stardust"

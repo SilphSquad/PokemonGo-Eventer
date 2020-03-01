@@ -1,12 +1,12 @@
 Name: "Raid Hour"
 Type: "RAID_HOUR"
-StartTime: "2020-02-12T18:00:00"
-EndTime: "2020-02-12T19:00:00"
+StartTime: "2020-03-25T18:00:00"
+EndTime: "2020-03-25T19:00:00"
 Timezone: null
 Wild: []
 Research: []
 Eggs: {}
 Raids:
   5*:
-    - "Tornadus"
+    - "Thundurus"
 Bonus: []

@@ -13,6 +13,10 @@ Eggs:
     - "Party Hat Charmander [Shiny] [New]"
     - "Party Hat Squirtle [Shiny] [New]"
 Raids:
+  1*:
+    - "Party Hat Bulbasaur [Shiny] [New]"
+    - "Party Hat Charmander [Shiny] [New]"
+    - "Party Hat Squirtle [Shiny] [New]"
   4*:
     - "Clone Venusaur [New]"
     - "Clone Charizard [New]"

@@ -1,0 +1,11 @@
+Name: "Mystery Bonus"
+Type: "MYSTERY_BONUS_HOUR"
+StartTime: "2020-03-26T18:00:00"
+EndTime: "2020-03-26T19:00:00"
+Timezone: null
+Wild: []
+Research: []
+Eggs: {}
+Raids: {}
+Bonus:
+  - "Mystery Bonus"
