@@ -5,19 +5,19 @@ from typing import Optional, List, Dict
 
 from pytz import timezone
 
-from Data.EventType import EventType
+from Eventer.EventType import EventType
 
 LOGGER = logging.getLogger(__name__)
 
 
 class Event:
-	def __init__(self, name: str, event_type: EventType, start_time: str, end_time: str, timezone: Optional[str] = None,
-	             wild: Optional[List[str]] = None, research: Optional[List[str]] = None,
-	             eggs: Optional[Dict[str, List[str]]] = None, raids: Optional[Dict[str, List[str]]] = None,
-	             bonuses: Optional[List[str]] = None):
+	def __init__(self, name: str, event_type: EventType, start_time: str, end_time: str,
+	             time_zone: Optional[str] = None, wild: Optional[List[str]] = None,
+	             research: Optional[List[str]] = None, eggs: Optional[Dict[str, List[str]]] = None,
+	             raids: Optional[Dict[str, List[str]]] = None, bonuses: Optional[List[str]] = None):
 		self.name = name
 		self.event_type = event_type
-		self.timezone = timezone or 'Pacific/Auckland'
+		self.time_zone = time_zone or 'Pacific/Auckland'
 		self.start_time = start_time
 		self.end_time = end_time
 		self.wild = wild or []
@@ -27,7 +27,7 @@ class Event:
 		self.bonuses = bonuses or []
 
 	def local_time(self) -> str:
-		return timezone(self.timezone) \
+		return timezone(self.time_zone) \
 			.localize(datetime.strptime(self.start_time, '%Y-%m-%dT%H:%M:%S')) \
 			.astimezone(timezone('Pacific/Auckland')) \
 			.isoformat(sep='T')

@@ -22,13 +22,12 @@ Uses Google Calendar + Google Sheets to create events for PokemonGo and invite p
 3. Run the following:
     ```bash
     $ pip install -r requirements.txt
-    $ python -m Attender
+    $ python -m Eventer -t
     ```
 4. Edit the created `config.yaml` as needed.
 5. Create the folder `events/`, fill it with a `.yaml` file for each event
 6. Run the following:
     ```bash
-   $ python -m Attender
    $ python -m Eventer
     ```
 

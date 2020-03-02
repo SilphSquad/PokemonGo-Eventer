@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 import logging
-from typing import Dict, Any
+from typing import List
 
-from Data.EventType import EventType
+from Eventer.EventType import EventType
 
 LOGGER = logging.getLogger(__name__)
 
 
 class Attendee:
-	def __init__(self, entry: Dict[str, Any]):
-		self.name = entry['name']
-		self.email = entry['email']
-		self.event_types = [EventType[x] for x in entry['types']]
+	def __init__(self, name: str, email: str, event_types: List[EventType]):
+		self.name = name
+		self.email = email
+		self.event_types = event_types
 
 	def output(self):
 		return {'displayName': self.name, 'email': self.email, 'optional': True}
