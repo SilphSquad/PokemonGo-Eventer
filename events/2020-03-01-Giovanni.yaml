@@ -1,7 +1,7 @@
 Name: "Giovanni"
 Type: "GIOVANNI_SPECIAL_RESEARCH"
 StartTime: "2020-03-01T00:00:00"
-EndTime: "2020-04-01T23:59:59"
+EndTime: "2020-03-31T23:59:59"
 Timezone: null
 Wild: []
 Research: []
