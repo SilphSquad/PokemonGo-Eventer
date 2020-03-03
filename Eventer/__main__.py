@@ -31,6 +31,8 @@ def parse_attendees() -> List[Attendee]:
 		if entry[0].strip() in CONFIG['Ignored']:
 			continue
 		LOGGER.info(f"Entry: {entry}")
+		if entry[0] == "Macro303":
+			continue
 		event_types = []
 		for temp in entry[2].split(','):
 			temp = temp.strip()
@@ -87,7 +89,6 @@ def parse_events(attendees: List[Attendee]):
 
 	current_events = list_events(service=service)
 
-	LOGGER.info(f"Existing Events: {[x['start']['dateTime'] + '-' + x['summary'] for x in current_events]}")
 	files = [p for p in TOP_DIR.joinpath("events").iterdir() if p.is_file()]
 	for file in files:
 		with open(file, 'r', encoding='UTF-8') as event_file:
