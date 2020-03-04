@@ -31,8 +31,6 @@ def parse_attendees() -> List[Attendee]:
 		if entry[0].strip() in CONFIG['Ignored']:
 			continue
 		LOGGER.info(f"Entry: {entry}")
-		if entry[0] == "Macro303":
-			continue
 		event_types = []
 		for temp in entry[2].split(','):
 			temp = temp.strip()
