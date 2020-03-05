@@ -1,0 +1,14 @@
+Name: "March Community Day"
+Type: "COMMUNITY_DAY"
+StartTime: "2020-03-15T15:00:00"
+EndTime: "2020-03-15T18:00:00"
+Timezone: null
+Wild:
+  - "Abra (Exclusive Move) [Shiny]"
+Research:
+  - "Exclusive Research Story ($0.99 USD)"
+Eggs: {}
+Raids: {}
+Bonus:
+  - "x3 Catch xp"
+  - "3hr Lures"

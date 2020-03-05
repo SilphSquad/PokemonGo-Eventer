@@ -203,11 +203,11 @@ def create_event(service, file_event: Event, attendees: List[Attendee]):
 		'description': file_event.description(),
 		'start': {
 			'dateTime': file_event.start_time,
-			'timeZone': file_event.timezone
+			'timeZone': file_event.time_zone
 		},
 		'end': {
 			'dateTime': file_event.end_time,
-			'timeZone': file_event.timezone
+			'timeZone': file_event.time_zone
 		},
 		'attendees': [x.output() for x in attendees],
 		'reminders': {
