@@ -1,7 +1,7 @@
-Name: "GBL S1 - Great League"
+Name: "GBL S1 - All Leagues"
 Type: "GO_BATTLE_LEAGUE"
-StartTime: "2020-03-09T13:00:00"
-EndTime: "2020-03-23T13:00:00"
+StartTime: "2020-04-24T13:00:00"
+EndTime: "2020-05-01T13:00:00"
 Timezone: "America/Los_Angeles"
 Wild: []
 Research: []

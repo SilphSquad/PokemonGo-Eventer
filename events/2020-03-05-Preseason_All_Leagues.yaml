@@ -1,7 +1,7 @@
-Name: "GBL Preseason - Master League"
+Name: "GBL Preseason - All Leagues"
 Type: "GO_BATTLE_LEAGUE"
-StartTime: "2020-02-24T13:00:00"
-EndTime: "2020-03-09T13:00:00"
+StartTime: "2020-03-05T13:00:00"
+EndTime: "2020-03-13T13:00:00"
 Timezone: "America/Los_Angeles"
 Wild: []
 Research: []

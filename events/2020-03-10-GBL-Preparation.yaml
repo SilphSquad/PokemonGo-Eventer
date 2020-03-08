@@ -1,0 +1,21 @@
+Name: "Go Battle League Preparation Event"
+Type: "GENERAL_EVENTS"
+StartTime: "2020-03-10T08:00:00"
+EndTime: "2020-03-12T22:00:00"
+Timezone: null
+Wild: []
+Research: []
+Eggs: {}
+Raids:
+  1*:
+    - "Shieldon"
+  2*:
+    - "Swampert"
+  3*:
+    - "Skarmory"
+  5*:
+    - "Registeel [Shiny]"
+    - "Cresselia [Shiny]"
+Bonus:
+  - "x2 Stardust from Raids"
+  - "x2 Stardust from Trainer Battles (Excluding GBL)"

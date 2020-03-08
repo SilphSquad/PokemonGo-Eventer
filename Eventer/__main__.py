@@ -78,7 +78,9 @@ def get_start_date() -> datetime:
 
 
 def main():
+	LOGGER.info("Getting Attendee List")
 	attendees = parse_attendees()
+	LOGGER.info("Getting Event List")
 	parse_events(attendees=attendees)
 
 
@@ -185,7 +187,7 @@ def update_event(service, file_event: Event, cal_event, attendees: List[Attendee
 			                       body=cal_event).execute()
 		LOGGER.info(f"{file_event.start_time.split('T')[0]}|{file_event.name} Event updated")
 	elif not updated:
-		LOGGER.info(f"No update for {file_event.start_time.split('T')[0]}|{file_event.name}")
+		LOGGER.debug(f"No update for {file_event.start_time.split('T')[0]}|{file_event.name}")
 
 
 def list_events(service):
@@ -232,4 +234,6 @@ def create_event(service, file_event: Event, attendees: List[Attendee]):
 
 if __name__ == '__main__':
 	init_logger()
+	LOGGER.info("Welcome to Pokemon Go - Eventer")
 	main()
+	LOGGER.info("Finished Creating/Updating Events")
