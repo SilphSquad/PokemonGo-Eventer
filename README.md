@@ -6,10 +6,10 @@
 [![Contributors](https://img.shields.io/github/contributors/Macro303/PokemonGo-Eventer.svg?style=flat-square)](https://github.com/Macro303/PokemonGo-Eventer/graphs/contributors)
 [![License](https://img.shields.io/github/license/Macro303/PokemonGo-Eventer.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-Uses Google Calendar + Google Sheets to create events for PokemonGo and invite people based on the type of Event
+Uses Google Calendar + Google Sheets to create events for PokemonGo and invite people based on the type of Events they wish to be notified about
 
 ## Built Using
- - Python 3.8.1
+ - Python 3.8.2
  - PyYAML 5.3
  - google-api-python-client 1.7.11
  - google-auth-httplib2 0.0.3
@@ -32,3 +32,4 @@ Uses Google Calendar + Google Sheets to create events for PokemonGo and invite p
     ```
 
 ## Notes
+If you want the full calendar you can find it with this link: [Pokemon Calendar](https://calendar.google.com/calendar?cid=MDZqaTEyY2tkZmVtbmFtNjJpb2MwbTZvbDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
