@@ -1,8 +1,8 @@
 Name: "Raid Weekend"
 Type: "RAID_DAY"
-StartTime: "2020-03-20T08:00:00"
-EndTime: "2020-03-23T22:00:00"
-Timezone: null
+StartTime: "2020-03-17T13:00:00"
+EndTime: "2020-03-23T13:00:00"
+Timezone: "America/Los_Angeles"
 Wild: []
 Research: []
 Eggs: {}
