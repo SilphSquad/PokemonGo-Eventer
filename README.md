@@ -11,7 +11,7 @@ Uses Google Calendar + Google Sheets to create events for PokemonGo and invite p
 ## Built Using
  - Python 3.8.2
  - PyYAML 5.3
- - google-api-python-client 1.7.12
+ - google-api-python-client 1.8.0
  - google-auth-httplib2 0.0.3
  - google-auth-oauthlib 0.4.1
  - pytz 2019.3
