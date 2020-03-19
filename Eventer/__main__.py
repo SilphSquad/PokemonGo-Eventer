@@ -102,7 +102,7 @@ def parse_events(attendees: List[Attendee]):
 			else:
 				start_time = datetime.strptime(yaml_event['StartTime'], '%Y-%m-%dT%H:%M:%S')
 				end_time = datetime.strptime(yaml_event['EndTime'], '%Y-%m-%dT%H:%M:%S')
-				if (end_time - start_time).days > 10:
+				if (end_time - start_time).days > 8:
 					start = Event(
 						name=yaml_event['Name'] + ' Start',
 						event_type=event_type,
